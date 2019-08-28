@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context=".CatDetailFragment">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/catImageView"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_margin="@dimen/margin_small"
+            app:layout_constraintEnd_toStartOf="@+id/descriptionTextView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/descriptionTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:layout_marginStart="@dimen/margin_small"
+            android:textColor="@color/colorBlack"
+            android:textSize="18sp"
+            android:typeface="serif"
+            app:layout_constraintBottom_toBottomOf="@+id/catImageView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/catImageView"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Description goes here"/>
+
+        <Button
+            android:id="@+id/playSoundButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_small"
+            android:drawableEnd="@drawable/ic_play_circle_filled_black_24dp"
+            android:text="@string/play_sound"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:drawablePadding="@dimen/margin_small"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/catImageView"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
