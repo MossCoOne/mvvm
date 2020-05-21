@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity(), ItemOnclickListener {
         val viewModel = ViewModelProviders.of(this).get(CatListViewModel::class.java)
         viewModel.catListLiveData.observe(this, Observer { catEntries: List<CatEntry?>? ->
             //update ui with data from db
-            catListAdapter!!.setCatListItems(catEntries)
+            catListAdapter?.setCatListItems(catEntries)
         })
     }
 
